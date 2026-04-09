@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Jurisprudência CARF</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#111827;--navy-card:#1a2540;--navy-muted:#1e2b46;--navy-subtle:#243050;--border:#2a3a5c;--border-sub:#222f48;--amber:#c8973a;--amber-light:#e0b05a;--amber-pale:rgba(200,151,58,.12);--amber-border:rgba(200,151,58,.3);--text:#e8e4dc;--text-mid:#b8c0cc;--text-soft:#7a8899;--text-hint:#4a5568}
+body{font-family:'Source Sans 3',system-ui,sans-serif;background:var(--navy);color:var(--text);min-height:100vh;line-height:1.65}
+.serif{font-family:'Playfair Display',Georgia,serif}
+a{color:inherit;text-decoration:none}button{cursor:pointer;font-family:inherit}input,select{font-family:inherit}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--navy)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.header{background:var(--navy-muted);border-bottom:1px solid var(--border)}
+.header-in{max-width:1300px;margin:0 auto;padding:1.35rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.brand{display:flex;align-items:center;gap:1rem}
+.bmark{width:42px;height:42px;border-radius:6px;border:1px solid var(--amber-border);background:var(--amber-pale);display:flex;align-items:center;justify-content:center}
+.bmark svg{width:20px;height:20px;stroke:var(--amber);fill:none;stroke-width:1.6}
+.bname{font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:400;color:var(--amber-light)}
+.bsub{font-size:.63rem;color:var(--text-soft);letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
+.tw{background:rgba(17,24,39,.9);border-bottom:1px solid var(--border-sub);position:sticky;top:0;z-index:100}
+.tb{max-width:1300px;margin:0 auto;padding:.8rem 2rem;display:flex;gap:.65rem;flex-wrap:wrap;align-items:center}
+.sw{display:flex;align-items:center;gap:.5rem;background:var(--navy-card);border:1px solid var(--border);border-radius:8px;padding:.45rem .9rem;flex:1;min-width:220px}
+.sw svg{width:14px;height:14px;stroke:var(--text-hint);flex-shrink:0}
+.sw input{border:none;outline:none;font-size:.85rem;background:transparent;color:var(--text);width:100%}
+.ss{background:var(--navy-card);border:1px solid var(--border);border-radius:8px;padding:.45rem .85rem;font-size:.82rem;color:var(--text-mid);outline:none;min-width:190px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%234a5568'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .7rem center;padding-right:2rem;cursor:pointer}
+.ss option{background:var(--navy-card)}
+.tagsbar{max-width:1300px;margin:0 auto;padding:.65rem 2rem;display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--border-sub)}
+.tlbl{font-size:.6rem;color:var(--text-hint);letter-spacing:.12em;text-transform:uppercase;margin-right:4px}
+.tag{padding:.18rem .8rem;border-radius:20px;font-size:.7rem;border:1px solid var(--border);background:transparent;color:var(--text-soft);cursor:pointer}
+.tag.on{color:var(--amber-light);border-color:var(--amber-border);background:var(--amber-pale)}
+.main{max-width:1300px;margin:0 auto;padding:1.5rem 2rem 3rem}
+.inf{font-size:.68rem;color:var(--text-hint);letter-spacing:.06em;margin-bottom:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
+.card{background:var(--navy-card);border-radius:10px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:border-color .18s,transform .18s}
+.card:hover{border-color:rgba(200,151,58,.35);transform:translateY(-2px)}
+.cb{padding:1.15rem 1.25rem;flex:1;display:flex;flex-direction:column;gap:.65rem}
+.ct{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:400;color:var(--amber-light);line-height:1.45}
+.cm{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
+.cd{font-size:.67rem;color:var(--text-soft)}
+.cp{font-size:.67rem;font-weight:500;padding:.15rem .7rem;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.eb{border-left:2px solid var(--amber-border);padding-left:.85rem}
+.et{font-style:italic;font-size:.78rem;color:var(--text-mid);line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.vm{margin-top:.4rem;font-size:.68rem;color:var(--amber);background:none;border:none;padding:0;cursor:pointer}
+.sl{font-size:.58rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-hint);margin-bottom:3px}
+.rt{font-size:.8rem;color:var(--text);line-height:1.75;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.cf{display:flex;align-items:center;justify-content:flex-end;padding:.65rem 1.25rem;border-top:1px solid var(--border-sub);background:var(--navy-muted)}
+.la{font-size:.7rem;color:var(--text-mid);border:1px solid var(--border);background:transparent;padding:.22rem .75rem;border-radius:20px;display:inline-flex;align-items:center;gap:.3rem;transition:all .15s}
+.la:hover{border-color:var(--amber-border);color:var(--amber)}
+.la svg{width:12px;height:12px;stroke:currentColor;flex-shrink:0}
+.empty{grid-column:1/-1;text-align:center;padding:5rem;background:var(--navy-card);border-radius:12px;border:1px solid var(--border)}
+footer{text-align:center;padding:1.5rem;font-size:.63rem;color:var(--text-hint);letter-spacing:.09em;border-top:1px solid var(--border-sub)}
+@media(max-width:640px){.header-in,.tb,.tagsbar,.main{padding-left:1rem;padding-right:1rem}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><div class="header-in">
+  <div class="brand"><div class="bmark"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+  <div><div class="bname">Jurisprudência CARF</div><div class="bsub">Conselho Administrativo de Recursos Fiscais</div></div></div>
+  <span style="font-size:.7rem;color:var(--text-hint)" id="hc"></span>
+</div></header>
+<div class="tw"><div class="tb">
+  <div class="sw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><input type="text" id="bi" placeholder="Pesquisar…" oninput="f()"></div>
+  <select class="ss" id="as" onchange="f()"><option value="">Todos os assuntos</option></select>
+</div></div>
+<div class="tagsbar" id="tgb"></div>
+<main class="main"><p class="inf" id="inf"></p><div class="grid" id="gr"></div></main>
+<footer>CARF &nbsp;·&nbsp; Conselho Administrativo de Recursos Fiscais</footer>
+<script>
+const D=[
+  {
+    "acordao": "9101-006.832",
+    "data": "2023-08-15",
+    "ementa": "IRPJ. LUCRO REAL. JUROS SOBRE CAPITAL PRÓPRIO. DEDUTIBILIDADE. PERÍODO DE APURAÇÃO. Os juros sobre o capital próprio somente são dedutíveis no período de apuração em que forem efetivamente pagos ou creditados ao sócio ou acionista, sendo vedado o aproveitamento em período posterior.",
+    "resumo": "O CARF manteve a glosa de JCP lançados contabilmente em período anterior ao do efetivo pagamento ou crédito, reafirmando que a dedução obedece ao regime de competência modificado pela legislação específica do instituto.",
+    "link": "https://carf.fazenda.gov.br/sincon/public/pages/ConsultarJurisprudencia/consultarJurisprudenciaCarf.jsf",
+    "assunto": "Juros sobre Capital Próprio",
+    "id": 1
+  },
+  {
+    "acordao": "3302-013.145",
+    "data": "2023-11-20",
+    "ementa": "CSLL. ADIÇÕES E EXCLUSÕES. EQUIVALÊNCIA PATRIMONIAL. CONTROLADAS E COLIGADAS NO EXTERIOR. Resultado positivo da equivalência patrimonial em controladas no exterior deve ser adicionado à base de cálculo da CSLL para fins de tributação pelo lucro real.",
+    "resumo": "A turma decidiu que os lucros auferidos por controladas no exterior devem ser tributados no Brasil pela empresa controladora, nos termos da legislação vigente, afastando a tese de diferimento indefinido.",
+    "link": "https://carf.fazenda.gov.br/sincon/public/pages/ConsultarJurisprudencia/consultarJurisprudenciaCarf.jsf",
+    "assunto": "Tributação Internacional",
+    "id": 2
+  },
+  {
+    "acordao": "1302-006.501",
+    "data": "2024-02-08",
+    "ementa": "CONTRIBUIÇÕES PREVIDENCIÁRIAS. PLANO DE STOCK OPTIONS. NATUREZA MERCANTIL. A outorga de stock options a empregados, quando sujeita a risco e onerosidade, possui natureza mercantil e não remuneratória, afastando a incidência de contribuições previdenciárias.",
+    "resumo": "O CARF reconheceu natureza mercantil quando há risco de mercado e custo para o beneficiário, afastando a incidência de contribuições previdenciárias sobre o ganho obtido no exercício das opções.",
+    "link": "https://carf.fazenda.gov.br/sincon/public/pages/ConsultarJurisprudencia/consultarJurisprudenciaCarf.jsf",
+    "assunto": "Contribuições Previdenciárias",
+    "id": 3
+  },
+  {
+    "acordao": "9202-010.312",
+    "data": "2024-03-22",
+    "ementa": "PIS/COFINS. REGIME NÃO-CUMULATIVO. INSUMOS. CONCEITO. ESSENCIALIDADE E RELEVÂNCIA. O conceito de insumo para fins de creditamento de PIS e COFINS deve ser aferido segundo os critérios da essencialidade e relevância para a atividade econômica desenvolvida.",
+    "resumo": "Seguindo o STJ no REsp 1.221.170/PR, o CARF reconheceu crédito de PIS/COFINS sobre despesas com insumos essenciais ou relevantes à atividade produtiva, ampliando o escopo do creditamento.",
+    "link": "https://carf.fazenda.gov.br/sincon/public/pages/ConsultarJurisprudencia/consultarJurisprudenciaCarf.jsf",
+    "assunto": "PIS/Cofins",
+    "id": 4
+  },
+  {
+    "acordao": "2401-011.780",
+    "data": "2024-05-14",
+    "ementa": "IRPF. GANHO DE CAPITAL. ALIENAÇÃO DE PARTICIPAÇÃO SOCIETÁRIA. VALOR DE MERCADO. A apuração do ganho de capital na alienação de participação societária deve considerar o valor efetivamente recebido, não sendo admitida redução a título de expectativa de passivos contingentes.",
+    "resumo": "A turma manteve o lançamento, entendendo que passivos contingentes não reduzem o preço de alienação para fins de apuração do ganho de capital no IRPF, salvo cláusula de ajuste de preço previamente prevista em contrato.",
+    "link": "https://carf.fazenda.gov.br/sincon/public/pages/ConsultarJurisprudencia/consultarJurisprudenciaCarf.jsf",
+    "assunto": "Ganho de Capital",
+    "id": 5
+  }
+];
+const M={"Juros sobre Capital Próprio":{"fill":"rgba(200,151,58,.13)","text":"#e0b05a","border":"rgba(200,151,58,.4)"},"Tributação Internacional":{"fill":"rgba(99,179,237,.1)","text":"#7ec8f5","border":"rgba(99,179,237,.35)"},"Contribuições Previdenciárias":{"fill":"rgba(154,117,210,.1)","text":"#c4a0e8","border":"rgba(154,117,210,.35)"},"PIS/Cofins":{"fill":"rgba(72,187,120,.1)","text":"#6dd5a0","border":"rgba(72,187,120,.35)"},"Ganho de Capital":{"fill":"rgba(237,137,54,.1)","text":"#f0a96a","border":"rgba(237,137,54,.35)"}};
+const P=[{fill:"rgba(200,151,58,.13)",text:"#e0b05a",border:"rgba(200,151,58,.4)"},{fill:"rgba(99,179,237,.1)",text:"#7ec8f5",border:"rgba(99,179,237,.35)"},{fill:"rgba(154,117,210,.1)",text:"#c4a0e8",border:"rgba(154,117,210,.35)"},{fill:"rgba(72,187,120,.1)",text:"#6dd5a0",border:"rgba(72,187,120,.35)"},{fill:"rgba(237,137,54,.1)",text:"#f0a96a",border:"rgba(237,137,54,.35)"},{fill:"rgba(229,62,62,.1)",text:"#f08080",border:"rgba(229,62,62,.35)"},{fill:"rgba(56,178,172,.1)",text:"#60d0ca",border:"rgba(56,178,172,.35)"},{fill:"rgba(160,174,192,.1)",text:"#a8b8cc",border:"rgba(160,174,192,.3)"}];
+function gc(a){return M[a]||P[7]}
+function fmt(d){if(!d)return"";const[y,m,dd]=d.split("-");return dd+"/"+m+"/"+y}
+const asts=[...new Set(D.map(d=>d.assunto).filter(Boolean))].sort();
+const sel=document.getElementById("as");
+asts.forEach(a=>{const o=document.createElement("option");o.value=a;o.textContent=a;sel.appendChild(o)});
+document.getElementById("hc").textContent=D.length+" acórdão"+(D.length!==1?"s":"");
+let av="";
+const exE=new Set();
+function rt(){
+  const tb=document.getElementById("tgb");
+  tb.innerHTML='<span class="tlbl">Tema</span>';
+  asts.forEach(a=>{const c=gc(a);const b=document.createElement("button");b.className="tag"+(av===a?" on":"");b.textContent=a;if(av===a){b.style.background=c.fill;b.style.color=c.text;b.style.borderColor=c.border}b.onclick=()=>{av=av===a?"":a;sel.value=av;rt();f()};tb.appendChild(b)});
+}
+rt();
+function f(){
+  av=sel.value;rt();
+  const q=document.getElementById("bi").value.toLowerCase();
+  const lst=D.filter(d=>{const b=!q||[d.acordao,d.ementa,d.resumo,d.assunto].some(x=>x&&x.toLowerCase().includes(q));return b&&(!av||d.assunto===av)});
+  document.getElementById("inf").textContent=lst.length===D.length?D.length+" decisões":lst.length+" de "+D.length;
+  const gr=document.getElementById("gr");
+  if(!lst.length){gr.innerHTML='<div class="empty"><p style="font-family:Playfair Display,serif;font-size:1rem;color:var(--amber);margin-bottom:.4rem">Nenhuma decisão encontrada</p><p style="font-size:.82rem;color:var(--text-soft)">Tente outros termos.</p></div>';return}
+  gr.innerHTML="";
+  lst.forEach(d=>{
+    const c=gc(d.assunto);const eE=exE.has(d.id);
+    const card=document.createElement("div");card.className="card";
+    card.innerHTML='<div class="cb"><p class="ct">Acórdão '+d.acordao+'</p><div class="cm"><span class="cd">'+fmt(d.data)+'</span><span class="cp" style="background:'+c.fill+';color:'+c.text+';border:1px solid '+c.border+'">'+d.assunto+'</span></div><div class="eb"><p class="et'+(eE?" exp":"")+'">Assunto: '+d.ementa+'</p><button class="vm" onclick="tE('+d.id+')">'+(eE?"Ver ementa reduzida ▲":"Ver ementa completa ▼")+'</button></div>'+(d.resumo?'<div><div class="sl">Resumo</div><p class="rt">'+d.resumo+'</p></div>':'')+'</div>'+(d.link?'<div class="cf"><a class="la" href="'+d.link+'" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>Acessar acórdão</a></div>':'');
+    gr.appendChild(card);
+  });
+}
+function tE(id){if(exE.has(id))exE.delete(id);else exE.add(id);f()}
+f();
+</script>
+</body>
+</html>
