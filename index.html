@@ -40,10 +40,10 @@ a{color:inherit;text-decoration:none}button{cursor:pointer;font-family:inherit}i
 .cd{font-size:.67rem;color:var(--text-soft)}
 .cp{font-size:.67rem;font-weight:500;padding:.15rem .7rem;border-radius:20px;white-space:nowrap;flex-shrink:0}
 .eb{border-left:2px solid var(--amber-border);padding-left:.85rem}
-.et{font-style:italic;font-size:.78rem;color:var(--text-mid);line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.et.exp{display:block;-webkit-line-clamp:unset;overflow:visible}
-.vm{margin-top:.4rem;font-size:.68rem;color:var(--amber);background:none;border:none;padding:0;cursor:pointer}
+.et{font-style:italic;font-size:.78rem;color:var(--text-mid);line-height:1.7}
+
 .sl{font-size:.58rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-hint);margin-bottom:3px}
-.rt{font-size:.8rem;color:var(--text);line-height:1.75;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.rt{font-size:.8rem;color:var(--text);line-height:1.75}
 .cf{display:flex;align-items:center;justify-content:flex-end;padding:.65rem 1.25rem;border-top:1px solid var(--border-sub);background:var(--navy-muted)}
 .la{font-size:.7rem;color:var(--text-mid);border:1px solid var(--border);background:transparent;padding:.22rem .75rem;border-radius:20px;display:inline-flex;align-items:center;gap:.3rem;transition:all .15s}
 .la:hover{border-color:var(--amber-border);color:var(--amber)}
@@ -123,7 +123,6 @@ const sel=document.getElementById("as");
 asts.forEach(a=>{const o=document.createElement("option");o.value=a;o.textContent=a;sel.appendChild(o)});
 document.getElementById("hc").textContent=D.length+" acórdão"+(D.length!==1?"s":"");
 let av="";
-const exE=new Set();
 function rt(){
   const tb=document.getElementById("tgb");
   tb.innerHTML='<span class="tlbl">Tema</span>';
@@ -139,17 +138,12 @@ function f(){
   if(!lst.length){gr.innerHTML='<div class="empty"><p style="font-family:Playfair Display,serif;font-size:1rem;color:var(--amber);margin-bottom:.4rem">Nenhuma decisão encontrada</p><p style="font-size:.82rem;color:var(--text-soft)">Tente outros termos.</p></div>';return}
   gr.innerHTML="";
   lst.forEach(d=>{
-    const c=gc(d.assunto);const eE=exE.has(d.id);
+    const c=gc(d.assunto);
     const card=document.createElement("div");card.className="card";
-    card.innerHTML='<div class="cb"><p class="ct">Acórdão '+d.acordao+'</p><div class="cm"><span class="cd">'+fmt(d.data)+'</span><span class="cp" style="background:'+c.fill+';color:'+c.text+';border:1px solid '+c.border+'">'+d.assunto+'</span></div><div class="eb"><p class="et'+(eE?" exp":"")+'">Assunto: '+d.ementa+'</p><button class="vm" data-te="'+d.id+'">'+(eE?"Ver ementa reduzida ▲":"Ver ementa completa ▼")+'</button></div>'+(d.resumo?'<div><div class="sl">Resumo</div><p class="rt">'+d.resumo+'</p></div>':'')+'</div>'+(d.link?'<div class="cf"><a class="la" href="'+d.link+'" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>Acessar acórdão</a></div>':'');
+    card.innerHTML='<div class="cb"><p class="ct">Acórdão '+d.acordao+'</p><div class="cm"><span class="cd">'+fmt(d.data)+'</span><span class="cp" style="background:'+c.fill+';color:'+c.text+';border:1px solid '+c.border+'">'+d.assunto+'</span></div><div class="eb"><p class="et'+""+'">Assunto: '+d.ementa+'</p></div>'+(d.resumo?'<div><div class="sl">Resumo</div><p class="rt">'+d.resumo+'</p></div>':'')+'</div>'+(d.link?'<div class="cf"><a class="la" href="'+d.link+'" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>Acessar acórdão</a></div>':'');
     gr.appendChild(card);
   });
 }
-function tE(id){if(exE.has(id))exE.delete(id);else exE.add(id);f()}
-document.addEventListener('click',function(e){
-  const btn=e.target.closest('[data-te]');
-  if(btn){tE(parseInt(btn.dataset.te));}
-});
 f();
 </script>
 </body>
